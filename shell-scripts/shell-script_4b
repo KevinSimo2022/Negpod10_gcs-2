@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Read the names of the folders from the text file
+while read folder_name; do
+    # Create the folder
+    mkdir "$folder_name"
+    echo "Created folder: $folder_name"
+done < folders.txt
