@@ -1,0 +1,4 @@
+#!/bin/bash
+while read name; do
+sed "s/Recipient_name/$name/" message_template.txt > "message_$name.txt"
+done < recipients.txt

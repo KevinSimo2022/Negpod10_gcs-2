@@ -1,0 +1,9 @@
+#!/bin/bash
+while read -r folder_name; do
+if [ ! d "$folder_name" ]; then
+mkdir "$folder_name"
+echo "Folder $folder_name created"
+else
+echo "Folder $folder_name already exists"
+fi
+done < "folders.txt"
