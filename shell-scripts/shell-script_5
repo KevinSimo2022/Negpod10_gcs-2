@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Enter a path:"
+read path
+if [ -d "$path" ]; then
+echo "List of files in $path:"
+ls "$path"
+else
+echo "$path is not a directory."
+read -p "Enter the path of a directory: " directory_path
+if [ -d "$directory_path" ]; then
+echo "List of files in $directory_path:"
+ls "$directoy_path"
+else
+echo "$directory_path is not a valid directory path."
+fi
+fi
