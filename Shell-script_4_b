@@ -1,0 +1,4 @@
+#!/bin/bash
+while read folder_name; do
+    mkdir "$folder_name"
+done < folders.txt
