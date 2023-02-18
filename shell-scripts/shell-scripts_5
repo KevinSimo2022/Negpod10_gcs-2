@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -d "$1" ]; then
+echo " The path $1 is a directory. The files in this directory are:"
+ls "$1"
+else
+echo "The path $1 is not a directory. Please provide the path to a directory:"
+read dir_path
+if [ -d "$dir_path" ]; then
+echo "the path $dir_path is a directory. The files in this directory are:"
+ls "$dir_path"
+else
+echo "The path $dir_path is not a directory. EXITING."
+exit 1
+fi
+fi
